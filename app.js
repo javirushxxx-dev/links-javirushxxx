@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFooter();
     initInteractions();
     initAnalytics();
+    initScrollBlur(); // NEW: Initialize scroll blur effect
 });
 
 // ============================================
@@ -221,4 +222,32 @@ if (typeof module !== 'undefined' && module.exports) {
         initFooter,
         handleLinkClick
     };
+}
+
+// ============================================
+// SCROLL BLUR EFFECT
+// ============================================
+function initScrollBlur() {
+    const bgContainer = document.querySelector('.bg-container');
+    
+    if (!bgContainer) return;
+    
+    // Threshold for when blur starts (in pixels)
+    const blurThreshold = 100;
+    
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY || window.pageYOffset;
+        
+        // Add 'scrolled' class when user scrolls past threshold
+        if (scrollY > blurThreshold) {
+            bgContainer.classList.add('scrolled');
+        } else {
+            bgContainer.classList.remove('scrolled');
+        }
+    });
+    
+    // Also trigger on initial load if already scrolled
+    if (window.scrollY > blurThreshold) {
+        bgContainer.classList.add('scrolled');
+    }
 }
