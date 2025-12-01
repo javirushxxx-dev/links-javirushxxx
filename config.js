@@ -22,11 +22,11 @@ const CONFIG = {
             url: "https://onlyfans.com/javirushxxx",
             icon: "onlyfans",
             className: "link-onlyfans",
-            enabled: true
+            enabled: false
         },
         {
-            id: "twitter",
-            title: "Twitter",
+            id: "X",
+            title: "X",
             url: "https://x.com/javirushxxx?s=21",
             icon: "twitter",
             className: "link-twitter",
@@ -54,7 +54,7 @@ const CONFIG = {
             url: "https://www.reddit.com/u/NeighborhoodCool9238/s/StFC8Qw8rc",
             icon: "reddit",
             className: "link-reddit",
-            enabled: false
+            enabled: true
         },
         {
             id: "bluesky",
@@ -62,7 +62,7 @@ const CONFIG = {
             url: "https://bsky.app/profile/javirushxxx.bsky.social",
             icon: "bluesky",
             className: "link-bluesky",
-            enabled: false
+            enabled: true
         }
     ],
 
